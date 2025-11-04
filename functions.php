@@ -1,4 +1,19 @@
 <?php
+if ( ! function_exists( 'band_digital_setup' ) ) {
+    function band_digital_setup() {
+        // Tema sozlamalari
+        add_theme_support( 'title-tag' );
+        add_theme_support( 'post-thumbnails' );
+        add_theme_support( 'custom-logo', array(
+            'height' => 100,
+            'width'  => 400,
+            'flex-height' => true,
+            'flex-width'  => true,
+        ) );
+    }
+    add_action( 'after_setup_theme', 'band_digital_setup' );
+}
+
 // Style va Scriptlarni ulash
 function band_digital_enqueue_assets() {
 
@@ -28,3 +43,11 @@ function band_digital_enqueue_assets() {
     }
 }
 add_action( 'wp_enqueue_scripts', 'band_digital_enqueue_assets' );
+// Navigatsiya menyusini ro'yxatdan o'tkazish
+
+add_action( 'after_setup_theme', function(){
+	register_nav_menus( [
+		'header' => __('Primary Menu',"band_digital"),
+		'footer' => __('Secondary Menu',"band_digital"),
+	] );
+} );
