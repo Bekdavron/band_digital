@@ -10,17 +10,7 @@
     content="marketing,digital marketing,creative, agency, startup,promodise,onepage, clean, modern,seo,business, company" />
 
   <title>Promodise - seo and digital агентство</title>
-  <!-- bootstrap.min css -->
-  <link rel="stylesheet" href="plugins/bootstrap/css/bootstrap.css" />
-  <!-- Icofont Css -->
-  <link rel="stylesheet" href="plugins/fontawesome/css/all.css" />
-  <!-- animate.css -->
-  <link rel="stylesheet" href="plugins/animate-css/animate.css" />
-  <!-- Icofont -->
-  <link rel="stylesheet" href="plugins/icofont/icofont.css" />
-
-  <!-- Main Stylesheet -->
-  <link rel="stylesheet" href="css/style.css" />
+<?php wp_head(); ?>
 </head>
 
 <body data-spy="scroll" data-target=".fixed-top">
