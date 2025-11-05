@@ -51,3 +51,4 @@ add_action( 'after_setup_theme', function(){
 		'footer' => __('Secondary Menu',"band_digital"),
 	] );
 } );
+require_once get_template_directory() . '/inc/class-bootstrap-navwalker.php';

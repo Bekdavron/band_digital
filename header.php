@@ -10,7 +10,7 @@
     content="marketing,digital marketing,creative, agency, startup,promodise,onepage, clean, modern,seo,business, company" />
 
   <title>Promodise - seo and digital агентство</title>
-<?php wp_head(); ?>
+  <?php wp_head(); ?>
 </head>
 
 <body data-spy="scroll" data-target=".fixed-top">
@@ -27,31 +27,19 @@
       </button>
 
       <div class="collapse navbar-collapse justify-content-end" id="mainNav">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link" href="/"> Главная </a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarWelcome" role="button" data-toggle="dropdown"
-              aria-haspopup="true" aria-expanded="false">О нас</a>
-            <div class="dropdown-menu" aria-labelledby="navbarWelcome">
-              <a class="dropdown-item" href="about.html"> О компании </a>
-              <a class="dropdown-item" href="about.html"> Об услугах </a>
-            </div>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link smoth-scroll" href="service.html">Услуги</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link smoth-scroll" href="pricing.html">Цены</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link smoth-scroll" href="blog.html">Журнал</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link smoth-scroll" href="contact.html">Контакты</a>
-          </li>
-        </ul>
+        <nav class="navbar navbar-expand-lg navbar-light">
+          <div class="container">
+            <?php
+            wp_nav_menu([
+              'theme_location'  => 'header',
+              'menu_class'      => 'navbar-nav',
+              'container'       => false,
+              "depth"           => 2,
+              'walker'          => new bootstrap_4_walker_nav_menu(),
+            ]);
+            ?>
+          </div>
+        </nav>
       </div>
     </div>
   </nav>
