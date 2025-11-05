@@ -16,9 +16,19 @@
 <body data-spy="scroll" data-target=".fixed-top">
   <nav class="navbar navbar-expand-lg fixed-top trans-navigation">
     <div class="container">
-      <a class="navbar-brand" href="index.html">
+      <?php
+      if ( has_custom_logo() ) {
+        the_custom_logo(); // agar logo bo'lsa, uni chiqaradi
+    } else {
+    echo '<h3><a class="text-white" href="' . esc_url( home_url('/') ) . '">' . get_bloginfo('name') . '</a></h3>';
+}
+
+
+      
+      ?>
+      <!-- <a class="navbar-brand" href="index.html">
         <img src="images/logo.png" alt="" class="img-fluid b-logo" />
-      </a>
+      </a> -->
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainNav" aria-controls="mainNav"
         aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon">
