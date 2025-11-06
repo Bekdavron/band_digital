@@ -8,14 +8,14 @@
         <div class="row">
           <div class="col-lg-8 m-auto text-center col-sm-12 col-md-12">
             <div class="banner-content content-padding">
-              <h5 class="subtitle">Диджитал агентство</h5>
-              <h1 class="banner-title">Мы делаем SEO-продвижение и оказываем digital услуги</h1>
+              <!-- Wordpress Post Meta start -->
+              <h5 class="subtitle"><?php echo get_post_meta( $post-> ID, 'banner-subtitle', true )?></h5>
+              <h1 class="banner-title"><?php echo get_post_meta( $post->ID,'banner-title',true)?></h1>
               <p>
-                К нам обращаются, когда нужно создать лендинг под новый товар или услугу, еще, если нужно продвинуть
-                имеющийся сайт в топ по поисковым запросам.
+                <?php echo get_post_meta( $post-> ID, 'banner-text', true )?>
               </p>
-
               <a href="#" class="btn btn-white btn-circled">Начать сотрудничество</a>
+              <!-- Wordpress Post Meta end -->
             </div>
           </div>
         </div>
@@ -23,79 +23,15 @@
     </div>
   </div>
 </div>
-<!--MAIN HEADER AREA END -->
 <!--  ABOUT AREA START  -->
+<!-- GUTENBERG START -->
 <section id="intro" class="section-padding">
   <div class="container">
-    <div class="row">
-      <div class="col-lg-12 col-sm-12 col-md-12">
-        <div class="section-heading">
-          <p class="lead">
-            Мы оказываем маркетинговые услуги с 2016 года за это время мы выполнили больше сотни проеков,
-            подключайтесь к совместной работе с нами
-          </p>
-        </div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-lg-5 d-none d-lg-block col-sm-12">
-        <div class="intro-img">
-          <img src="images/banner/why-choose.png" alt="intro-img" class="img-fluid" />
-        </div>
-      </div>
-      <div class="col-lg-7 col-md-12 col-sm-12">
-        <div class="row">
-          <div class="col-lg-6 col-sm-6 col-md-6">
-            <div class="intro-box">
-              <span>01.</span>
-              <h4>Проекты</h4>
-              <p>
-                мы ведем каждый проект индивидуально, за вами закрепляется менеджер, который работает только с вами.
-              </p>
-            </div>
-          </div>
-          <div class="col-lg-6 col-sm-6 col-md-6">
-            <div class="intro-box">
-              <span>02.</span>
-              <h4>Стратегия</h4>
-              <p>
-                не беремся за проект, если он одноразовый, запускаем такие проекты, с которыми будем работать
-                несоклько лет.
-              </p>
-            </div>
-          </div>
-          <div class="col-lg-6 col-sm-6 col-md-6">
-            <div class="intro-box">
-              <span>03.</span>
-              <h4>Опыт</h4>
-              <p>
-                мы успели поработать в разных нишах: строительство, инвестиции, онлайн-образование, бьюти-сфера и
-                другие.
-              </p>
-            </div>
-          </div>
-          <div class="col-lg-6 col-sm-6 col-md-6">
-            <div class="intro-box">
-              <span>04.</span>
-              <h4>Технологии</h4>
-              <p>
-                Все проекты делает команда разработчиков, которая постоянно учится новому, мы используем современные
-                инструменты для решения ваших задач.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-lg-12">
-            <div class="intro-cta">
-              <p class="lead">Остались вопросы? <a href="#contact" class="smoth-scroll">Напишите нам</a></p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    <?php the_content();?>
   </div>
 </section>
+<!-- GUTENBERG END -->
+
 <!--  ABOUT AREA END  -->
 
 <!--  SERVICE AREA START  -->

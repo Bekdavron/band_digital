@@ -9,7 +9,8 @@
   <meta name="keywords"
     content="marketing,digital marketing,creative, agency, startup,promodise,onepage, clean, modern,seo,business, company" />
 
-  <title>Promodise - seo and digital агентство</title>
+  <title><?php bloginfo('name'); ?><?php wp_title('-'); ?></title>
+
   <?php wp_head(); ?>
 </head>
 
@@ -19,9 +20,9 @@
       <?php
       if ( has_custom_logo() ) {
         the_custom_logo(); // agar logo bo'lsa, uni chiqaradi
-    } else {
-    echo '<h3><a class="text-white" href="' . esc_url( home_url('/') ) . '">' . get_bloginfo('name') . '</a></h3>';
-}
+       } else {
+      echo '<h3><a class="text-white" href="' . esc_url( home_url('/') ) . '">' . get_bloginfo('name') . '</a></h3>';
+  }
 
 
       
