@@ -10,6 +10,13 @@ if ( ! function_exists( 'band_digital_setup' ) ) {
             'flex-height' => true,
             'flex-width'  => true,
         ) );
+          // Sidebar uchun kichik rasm
+        add_image_size( 'sidebar-thumb', 120, 90, true );
+        // Post card uchun zamonaviy preview rasm
+        add_image_size( 'post-card', 400, 250, true );
+            // To‘liq kenglikdagi col-12 premium preview
+        add_image_size( 'post-full', 1200, 600, true );
+
     }
     add_action( 'after_setup_theme', 'band_digital_setup' );
 }
@@ -52,3 +59,13 @@ add_action( 'after_setup_theme', function(){
 	] );
 } );
 require_once get_template_directory() . '/inc/class-bootstrap-navwalker.php';
+// Keraksiz default miniaturalarni o'chirish
+function custom_remove_default_image_sizes($sizes) {
+    unset($sizes['medium']);
+    unset($sizes['medium_large']);
+    unset($sizes['large']);
+    unset($sizes['1536x1536']);
+    unset($sizes['2048x2048']);
+    return $sizes;
+}
+add_filter('intermediate_image_sizes_advanced', 'custom_remove_default_image_sizes');

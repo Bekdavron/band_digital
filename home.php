@@ -29,7 +29,7 @@
              <?php if ($counter === 3): ?>
              <div class="col-lg-12">
                <div class="blog-post full-width">
-                 <?php if(has_post_thumbnail()): the_post_thumbnail(); else: echo "<img class='' src='" . get_template_directory_uri() . "/images/blog/default.jpg' alt='Default image'>";?>
+                 <?php if(has_post_thumbnail()): the_post_thumbnail("post-full", ["class" => "img-fluid w-100"]); else: echo "<img class='img-fluid w-100' src='" . get_template_directory_uri() . "/images/blog/default.jpg' alt='Default image'>";?>
 
                  <?php endif; ?>
                  <div class="mt-4 mb-3 d-flex">
@@ -52,7 +52,7 @@
              <?php else : ?>
              <div class="col-lg-6">
                <div class="blog-post">
-                 <?php if(has_post_thumbnail()): the_post_thumbnail(); else: echo "<img class='' src='" . get_template_directory_uri() . "/images/blog/default.jpg' alt='Default image'>";?>
+                 <?php if(has_post_thumbnail()): the_post_thumbnail("post-card" ,["class"=> "img-fluid"]); else: echo "<img class='' src='" . get_template_directory_uri() . "/images/blog/default.jpg' alt='Default image'>";?>
 
 
                  <?php endif; ?>

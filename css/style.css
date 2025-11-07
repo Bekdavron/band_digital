@@ -1237,12 +1237,13 @@ BLOG PAGE
 
 .blog-post img {
   border-radius: 5px;
-  /* Ccustom style */
+  /* Custom style */
   height: 250px;
   object-fit: cover;
 }
+ /* Custom style */
 .blog-post.full-width img{
-  height: 350px;
+  height: 450px;
   object-fit: cover;
   width: 100%;
 }
