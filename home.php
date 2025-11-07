@@ -52,9 +52,7 @@
              <?php else : ?>
              <div class="col-lg-6">
                <div class="blog-post">
-                 <?php if(has_post_thumbnail()): the_post_thumbnail("post-card" ,["class"=> "img-fluid"]); else: echo "<img class='' src='" . get_template_directory_uri() . "/images/blog/default.jpg' alt='Default image'>";?>
-
-
+                 <?php if(has_post_thumbnail()): the_post_thumbnail("post-thumbnails" ,["class"=> "img-fluid"]); else: echo "<img class='' src='" . get_template_directory_uri() . "/images/blog/default.jpg' alt='Default image'>";?>
                  <?php endif; ?>
                  <div class="mt-4 mb-3 d-flex">
                    <div class="post-author mr-3">
@@ -79,74 +77,6 @@
              <p>Записей нет.</p>
              <?php endif; ?>
            </div>
-
-           <div class="row">
-             <div class="col-lg-12">
-               <div class="blog-post">
-                 <img src="images/blog/blog-lg.jpg" alt="" class="img-fluid">
-                 <div class="mt-4 mb-3 d-flex">
-                   <div class="post-author mr-3">
-                     <i class="fa fa-user"></i>
-                     <span class="h6 text-uppercase">Марина Цветкова</span>
-                   </div>
-
-                   <div class="post-info">
-                     <i class="fa fa-calendar-check"></i>
-                     <span>30 марта 2020</span>
-                   </div>
-                 </div>
-                 <a href="blog-single.html" class="h4 ">Провал в стратегии продвижения</a>
-                 <p class="mt-3">Что делать, если вы наняли некомпетентного специалиста для продвижения? Можно ли спасти
-                   проект, который попал в теневой бан или нет.</p>
-                 <a href="blog-single.html" class="read-more">Читать статью <i class="fa fa-angle-right"></i></a>
-               </div>
-             </div>
-           </div>
-
-           <div class="row">
-             <div class="col-lg-6">
-               <div class="blog-post">
-                 <img src="images/blog/blog-3.jpg" alt="" class="img-fluid">
-                 <div class="mt-4 mb-3 d-flex">
-                   <div class="post-author mr-3">
-                     <i class="fa fa-user"></i>
-                     <span class="h6 text-uppercase">Оксана Вальнова</span>
-                   </div>
-
-                   <div class="post-info">
-                     <i class="fa fa-calendar-check"></i>
-                     <span>1 декабря 2019</span>
-                   </div>
-                 </div>
-                 <a href="blog-single.html" class="h4 ">Пять способов обойти конкурентов</a>
-                 <p class="mt-3">Поисковая выдача — это всегда конкуренция. Но что делать, чтобы конкуренты остались
-                   позади вас? Отвечаю в статье</p>
-                 <a href="blog-single.html" class="read-more">Читать статью <i class="fa fa-angle-right"></i></a>
-               </div>
-             </div>
-
-             <div class="col-lg-6">
-               <div class="blog-post">
-                 <img src="images/blog/blog-4.jpg" alt="" class="img-fluid">
-                 <div class="mt-4 mb-3 d-flex">
-                   <div class="post-author mr-3">
-                     <i class="fa fa-user"></i>
-                     <span class="h6 text-uppercase">Мишель Ким</span>
-                   </div>
-
-                   <div class="post-info">
-                     <i class="fa fa-calendar-check"></i>
-                     <span>10 ноября 2019</span>
-                   </div>
-                 </div>
-                 <a href="blog-single.html" class="h4 ">Лучшие сервисы для продвижения вашего сайта</a>
-                 <p class="mt-3">Существуют сервисы, котоорые могут помочь продвинуть сайт по СЕО, но есть и мошенники,
-                   которые могут оставить вас без денег.</p>
-                 <a href="blog-single.html" class="read-more">Читать статью <i class="fa fa-angle-right"></i></a>
-               </div>
-             </div>
-           </div>
-
          </div>
          <div class="col-lg-4">
            <div class="row">
