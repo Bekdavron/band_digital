@@ -69,32 +69,15 @@ function remove_heavy_wp_image_sizes( $sizes ) {
     return $sizes;
 }
 add_filter( 'intermediate_image_sizes_advanced', 'remove_heavy_wp_image_sizes' );
-// удаляет H2 из шаблона пагинации
-add_filter('navigation_markup_template', 'my_navigation_template', 10, 2 );
-function my_navigation_template( $template, $class ){
+
+// Убираем H2 из шаблона пагинации и оборачиваем в Bootstrap <ul class="pagination">
+add_filter('navigation_markup_template', function( $template, $class ){
     return '
     <nav class="navigation %1$s" role="navigation" aria-label="Page navigation">
         <ul class="pagination">%3$s</ul>
     </nav>
     ';
-}
-
-// выводим пагинацию
-the_posts_pagination( array(
-	'end_size' => 2,
-) );
-
-
-// bootstrap 4 uchun pagination sinflarini qo'shish
-
-the_posts_pagination( array(
-    'mid_size'  => 2,
-    'prev_text' => '<span class="page-link">« Предыдущая</span>',
-    'next_text' => '<span class="page-link">Следующая »</span>',
-    'before_page_number' => '<li class="page-item"><span class="page-link">',
-    'after_page_number'  => '</span></li>',
-    'screen_reader_text' => __('Posts navigation'),
-) );
+}, 10, 2 );
 
 
 // Maxsulotlar uchun excerpt uzunligini belgilash

@@ -84,10 +84,9 @@
               'mid_size'  => 2,
               'prev_text' => '<span class="page-link">« Предыдущая</span>',
               'next_text' => '<span class="page-link">Следующая »</span>',
-              'before_page_number' => '<li class="page-item"><span class="page-link">',
-              'after_page_number'  => '</span></li>',
-              'screen_reader_text' => __('Posts navigation'),
-              'type' => 'plain', // list bo‘lishi uchun keyinchalik filter ishlatamiz
+              'before_page_number' => '<span class="page-link">',
+              'after_page_number'  => '</span>',
+              
           ) );
           ?>
 

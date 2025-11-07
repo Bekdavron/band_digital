@@ -1723,30 +1723,33 @@ BLOG SINGLE
     margin-bottom: 30px;
   }
 }
-/* CUSTOM */
-/* Pagination matn rangi */
+.page-link{
+  color: #000;
+  margin: 0px 5px;
+}
+.pagination {
+    display: flex;
+    gap: 4px;
+}
+
+.pagination .page-numbers .page-link,
 .pagination .page-link {
-    color: #212529; /* asosiy matn rangi */
-    border: 1px solid #dee2e6; /* border optional, Bootstrap style uchun */
+    padding: 6px 12px;
+    border: 1px solid #dee2e6;
+    border-radius: 4px;
+    display: inline-block;
+    text-decoration: none;
+    color: #007bff;
 }
 
-/* Hover effekti: background rangini o‘zgartirish */
-.pagination .page-link:hover {
-    background-color: #4f3bbf; /* o'zingiz mos deb tanlagan rang */
-    color: #fff; /* hover matn rangi */
+/* Hover */
+.pagination a.page-numbers:hover .page-link {
+    background-color: #e9ecef;
 }
 
-/* Faol sahifa (active) */
-.pagination .page-item.active .page-link {
-    background-color: #007bff; /* active rang */
+/* ACTIVE (current page) */
+.pagination .current .page-link {
+    background-color: #007bff;
     color: #fff;
     border-color: #007bff;
-}
-
-/* Disabled tugma */
-.pagination .page-item.disabled .page-link {
-    color: #6c757d;
-    pointer-events: none;
-    background-color: #fff;
-    border-color: #dee2e6;
 }
