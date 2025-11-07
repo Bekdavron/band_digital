@@ -79,13 +79,18 @@
              <?php endif; ?>
            </div>
            <div class="col-lg-12">
-             <?php the_posts_pagination( array(
-                'mid_size'  => 2,
-                'prev_text' => __( '<span class="border px-2 py-1 mr-1">« Предыдущая</span>', 'band_digital' ),
-                'next_text' => __( '<span class="border px-2 py-1 mr-1">Следующая »</span>', 'band_digital' ),
-                'before_page_number' => '<span class="border px-2 py-1 mr-1">',
-	              'after_page_number'  => '</span>'
-            ) ); ?>
+             <?php
+          the_posts_pagination( array(
+              'mid_size'  => 2,
+              'prev_text' => '<span class="page-link">« Предыдущая</span>',
+              'next_text' => '<span class="page-link">Следующая »</span>',
+              'before_page_number' => '<li class="page-item"><span class="page-link">',
+              'after_page_number'  => '</span></li>',
+              'screen_reader_text' => __('Posts navigation'),
+              'type' => 'plain', // list bo‘lishi uchun keyinchalik filter ishlatamiz
+          ) );
+          ?>
+
            </div>
          </div>
          <div class="col-lg-4">
