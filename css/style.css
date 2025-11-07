@@ -1723,3 +1723,30 @@ BLOG SINGLE
     margin-bottom: 30px;
   }
 }
+/* CUSTOM */
+/* Pagination matn rangi */
+.pagination .page-link {
+    color: #212529; /* asosiy matn rangi */
+    border: 1px solid #dee2e6; /* border optional, Bootstrap style uchun */
+}
+
+/* Hover effekti: background rangini o‘zgartirish */
+.pagination .page-link:hover {
+    background-color: #4f3bbf; /* o'zingiz mos deb tanlagan rang */
+    color: #fff; /* hover matn rangi */
+}
+
+/* Faol sahifa (active) */
+.pagination .page-item.active .page-link {
+    background-color: #007bff; /* active rang */
+    color: #fff;
+    border-color: #007bff;
+}
+
+/* Disabled tugma */
+.pagination .page-item.disabled .page-link {
+    color: #6c757d;
+    pointer-events: none;
+    background-color: #fff;
+    border-color: #dee2e6;
+}
