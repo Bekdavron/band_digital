@@ -69,3 +69,48 @@ function remove_heavy_wp_image_sizes( $sizes ) {
     return $sizes;
 }
 add_filter( 'intermediate_image_sizes_advanced', 'remove_heavy_wp_image_sizes' );
+// удаляет H2 из шаблона пагинации
+add_filter('navigation_markup_template', 'my_navigation_template', 10, 2 );
+function my_navigation_template( $template, $class ){
+	/*
+	Вид базового шаблона:
+	<nav class="navigation %1$s" role="navigation">
+		<h2 class="screen-reader-text">%2$s</h2>
+		<div class="nav-links">%3$s</div>
+	</nav>
+	*/
+
+	return '
+	<nav class="navigation %1$s" role="navigation">
+		<div class="nav-links">%3$s</div>
+	</nav>
+	';
+}
+
+// выводим пагинацию
+the_posts_pagination( array(
+	'end_size' => 2,
+) );
+// Maxsulotlar uchun excerpt uzunligini belgilash
+// functions.php
+
+/**
+ * Post excerptni harflar bo'yicha kesuvchi funksiya (current post uchun)
+ * 
+ * @param int $char_limit Cheklash uzunligi (harflar)
+ * @return string Kesilgan excerpt
+ */
+function get_excerpt_by_char($char_limit = 50) {
+    // Current post excerptini olish
+    $excerpt = get_the_excerpt();
+
+    // HTML teglarini olib tashlash
+    $excerpt = strip_tags($excerpt);
+
+    // Harflar bo'yicha kesish
+    if (mb_strlen($excerpt) > $char_limit) {
+        $excerpt = mb_substr($excerpt, 0, $char_limit) . '...';
+    }
+
+    return $excerpt;
+}

@@ -43,8 +43,8 @@
                      <span><?php the_time( 'j F, Y' ) ?></span>
                    </div>
                  </div>
-                 <a href="blog-single.html" class="h4 "><?php the_title(); ?></a>
-                 <p class="mt-3"><?php the_excerpt(); ?></p>
+                 <a href="<?php the_permalink();?>" class="h4 "><?php the_title(); ?></a>
+                 <p class="mt-3"><?php echo get_excerpt_by_char(300); ?></p>
                  <a href="<?php the_permalink(); ?>" class="read-more">Читать статью <i
                      class="fa fa-angle-right"></i></a>
                </div>
@@ -65,8 +65,9 @@
                      <span><?php the_time( 'j F, Y' ) ?></span>
                    </div>
                  </div>
-                 <a href="blog-single.html" class="h4 "><?php the_title(); ?></a>
-                 <p class="mt-3"><?php the_excerpt(); ?></p>
+                 <a href="<?php the_permalink(); ?>" class="h4 "><?php the_title(); ?></a>
+                 <p class="mt-3"><?php echo get_excerpt_by_char(100); ?></p>
+
                  <a href="<?php the_permalink(); ?>" class="read-more">Читать статью <i
                      class="fa fa-angle-right"></i></a>
                </div>
@@ -76,6 +77,15 @@
              <?php endwhile; else : ?>
              <p>Записей нет.</p>
              <?php endif; ?>
+           </div>
+           <div class="col-lg-12">
+             <?php the_posts_pagination( array(
+                'mid_size'  => 2,
+                'prev_text' => __( '<span class="border px-2 py-1 mr-1">« Предыдущая</span>', 'band_digital' ),
+                'next_text' => __( '<span class="border px-2 py-1 mr-1">Следующая »</span>', 'band_digital' ),
+                'before_page_number' => '<span class="border px-2 py-1 mr-1">',
+	              'after_page_number'  => '</span>'
+            ) ); ?>
            </div>
          </div>
          <div class="col-lg-4">
