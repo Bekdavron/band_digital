@@ -104,11 +104,11 @@ add_action( 'widgets_init', 'band_digital_widgets_init' );
 function band_digital_widgets_init() {
     register_sidebar( array(
         'name'          => __( 'Sidebar', 'band_digital' ),
-        'id'            => 'sidebar-1',
+        'id'            => 'sidebar-blog',
         'description'   => __( 'Add widgets here to appear in your sidebar.', 'band_digital' ),
-        'before_widget' => '<div id="%1$s" class="widget %2$s">',
+        'before_widget' => '<div id="%1$s" class="sidebar-widget %2$s">',
         'after_widget'  => '</div>',
-        'before_title'  => '<h3 class="widget-title">',
-        'after_title'   => '</h3>',
+        'before_title'  => '<h5 class="mb-3">',
+        'after_title'   => '</h5>',
     ) );
 }
