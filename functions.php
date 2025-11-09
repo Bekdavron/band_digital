@@ -79,10 +79,6 @@ add_filter('navigation_markup_template', function( $template, $class ){
     ';
 }, 10, 2 );
 
-
-// Maxsulotlar uchun excerpt uzunligini belgilash
-// functions.php
-
 /**
 * Post excerptni harflar bo'yicha kesuvchi funksiya (current post uchun)
 *
@@ -102,4 +98,17 @@ $excerpt = mb_substr($excerpt, 0, $char_limit) . '...';
 }
 
 return $excerpt;
+}
+// sidebar widget maydonini ro'yxatdan o'tkazish
+add_action( 'widgets_init', 'band_digital_widgets_init' );
+function band_digital_widgets_init() {
+    register_sidebar( array(
+        'name'          => __( 'Sidebar', 'band_digital' ),
+        'id'            => 'sidebar-1',
+        'description'   => __( 'Add widgets here to appear in your sidebar.', 'band_digital' ),
+        'before_widget' => '<div id="%1$s" class="widget %2$s">',
+        'after_widget'  => '</div>',
+        'before_title'  => '<h3 class="widget-title">',
+        'after_title'   => '</h3>',
+    ) );
 }
