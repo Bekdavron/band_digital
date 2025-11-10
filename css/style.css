@@ -1790,8 +1790,5 @@ BLOG SINGLE
 }
 
 .search i{
-  color: #eee;;
-  top:0px;
-  right: 72px;
-
+display: none;
 }
