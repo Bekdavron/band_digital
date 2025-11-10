@@ -1,6 +1,5 @@
    <?php  get_header();?>
    <!--MAIN BANNER AREA START -->
-   <!--MAIN BANNER AREA START -->
    <div class="page-banner-area page-contact" id="page-banner">
      <div class="overlay dark-overlay"></div>
      <div class="container">
@@ -95,8 +94,8 @@
          <div class="col-lg-4">
            <div class="row">
              <div class="col-lg-12">
-               <?php if ( ! dynamic_sidebar() ) : dynamic_sidebar('sidebar-blog');?>
-
+               <?php if ( is_active_sidebar('sidebar-blog') ) : ?>
+               <?php dynamic_sidebar('sidebar-blog'); ?>
                <?php endif; ?>
                <div class="sidebar-widget search">
                  <div class="form-group">
