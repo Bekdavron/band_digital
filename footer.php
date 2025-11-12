@@ -47,7 +47,8 @@
         </div>
       </div>
       <div class="col-lg-3 col-sm-6 col-md-6">
-        <?php if ( is_active_sidebar('footer_contacts') ) : ?> <?php dynamic_sidebar('footer_contacts'); ?>
+        <?php if ( is_active_sidebar('footer_contacts') ) : ?>
+        <?php dynamic_sidebar('footer_contacts'); ?>
         <?php endif; ?>
       </div>
     </div>
