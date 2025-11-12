@@ -112,4 +112,21 @@ function band_digital_widgets_init() {
         'before_title'  => '<h5 class="widget-title mb-3">',
         'after_title'   => '</h5>',
     ) );
+        register_sidebar( array(
+        'name'          => __( 'Footer Text', 'band_digital' ),
+        'id'            => 'footer_text',
+        'description'   => __( 'Add widgets here to appear in your footerr.', 'band_digital' ),
+        'before_widget' => '<div id="%1$s" class="footer-widget footer-link %2$s">',
+        'after_widget'  => '</div>',
+        'before_title'  => '<h4>',
+        'after_title'   => '</h4>',
+    ) );
+         register_sidebar([
+        'name'          => __( 'Footer Contacts', 'webprogtheme' ),
+        'id'            => 'footer_contacts',
+        'before_widget' => '<div class="footer-widget footer-contacts">',
+        'after_widget'  => '</div>',
+        'before_title'  => '<h4>',
+        'after_title'   => '</h4>',
+  ]);
 }

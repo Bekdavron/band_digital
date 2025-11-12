@@ -3,52 +3,52 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-5 col-sm-8 col-md-8">
-        <div class="footer-widget footer-link">
+        <?php if ( is_active_sidebar('footer_text') ) : ?>
+        <?php dynamic_sidebar('footer_text'); ?>
+        <?php endif; ?>
+
+        <!-- <div class="footer-widget footer-link">
           <h4>Мы заботимся о том, чтобы вы <br />быстро развивали свой бизнес</h4>
           <p>
             Маркетинговое и диджитал агентство полного цикла: мы решаем задачи по продвижению и рекламе, делаем
             сайты и презентации, чтобы это не пришлось делать вам.
           </p>
-        </div>
+        </div> -->
+
       </div>
 
       <div class="col-lg-2 col-sm-4 col-md-4">
         <div class="footer-widget footer-link">
           <h4>Информация</h4>
           <?php
-        wp_nav_menu([
-          'theme_location' => 'footer_1',
-          'container'      => false, // <div> avtomatik chiqmasin
-          'menu_class'     => '',    // <ul> uchun class qo‘shmaymiz
-          'depth'          => 1,     // Faqat 1-darajali menyu
-          'items_wrap'     => '<ul>%3$s</ul>', // Faqat <ul><li>...</li></ul>
-        ]);
-        ?>
+          wp_nav_menu([
+            'theme_location' => 'footer_1',
+            'container'      => false, // <div> avtomatik chiqmasin
+            'menu_class'     => '',    // <ul> uchun class qo‘shmaymiz
+            'depth'          => 1,     // Faqat 1-darajali menyu
+            'items_wrap'     => '<ul>%3$s</ul>', // Faqat <ul><li>...</li></ul>
+          ]);
+          ?>
         </div>
-
-
       </div>
 
       <div class="col-lg-2 col-sm-6 col-md-6">
         <div class="footer-widget footer-link">
           <h4>Сылки</h4>
-          <ul>
-            <li><a href="#">Как это работает</a></li>
-            <li><a href="#">Поддержка</a></li>
-            <li><a href="#">Политика данных</a></li>
-            <li><a href="#">Сообщить об ошибке</a></li>
-            <li><a href="#">Лицензия</a></li>
-            <li><a href="#">Оферта</a></li>
-          </ul>
+          <?php
+          wp_nav_menu([
+            'theme_location' => 'footer_2',
+            'container'      => false, // <div> avtomatik chiqmasin
+            'menu_class'     => '',    // <ul> uchun class qo‘shmaymiz
+            'depth'          => 1,     // Faqat 1-darajali menyu
+            'items_wrap'     => '<ul>%3$s</ul>', // Faqat <ul><li>...</li></ul>
+          ]);
+          ?>
         </div>
       </div>
       <div class="col-lg-3 col-sm-6 col-md-6">
-        <div class="footer-widget footer-text">
-          <h4>Наши контакты</h4>
-          <p class="mail"><span>Email:</span> promdise@gmail.com</p>
-          <p><span>Телефон :</span>+7 495 27-73-894</p>
-          <p><span>Адрес:</span> г. Москва, ул. 40 лет СССР, строение 3, офис 37</p>
-        </div>
+        <?php if ( is_active_sidebar('footer_contacts') ) : ?> <?php dynamic_sidebar('footer_contacts'); ?>
+        <?php endif; ?>
       </div>
     </div>
     <div class="row">
