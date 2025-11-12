@@ -115,7 +115,7 @@ function band_digital_widgets_init() {
         register_sidebar( array(
         'name'          => __( 'Footer Text', 'band_digital' ),
         'id'            => 'footer_text',
-        'description'   => __( 'Add widgets here to appear in your footerr.', 'band_digital' ),
+        'description'   => __( 'Add widgets here to appear in your footer.', 'band_digital' ),
         'before_widget' => '<div id="%1$s" class="footer-widget footer-link %2$s">',
         'after_widget'  => '</div>',
         'before_title'  => '<h4>',
@@ -124,6 +124,7 @@ function band_digital_widgets_init() {
          register_sidebar([
         'name'          => __( 'Footer Contacts', 'band_digital' ),
         'id'            => 'footer_contacts',
+        'description'   => __( 'Add widgets here to appear in your footer.', 'band_digital' ),
         'before_widget' => '<div class="footer-widget footer-contacts">',
         'after_widget'  => '</div>',
         'before_title'  => '<h4>',
