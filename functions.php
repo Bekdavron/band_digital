@@ -57,7 +57,8 @@ add_action( 'wp_enqueue_scripts', 'band_digital_enqueue_assets' );
 add_action( 'after_setup_theme', function(){
 	register_nav_menus( [
 		'header' => __('Primary Menu',"band_digital"),
-		'footer' => __('Secondary Menu',"band_digital"),
+		'footer_1' => __('Footer Menu - Информация',"band_digital"),
+        'footer_2' => __('Footer Menu2 - ССылки',"band_digital"),
 	] );
 } );
 require_once get_template_directory() . '/inc/class-bootstrap-navwalker.php';

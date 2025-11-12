@@ -11,18 +11,22 @@
           </p>
         </div>
       </div>
+
       <div class="col-lg-2 col-sm-4 col-md-4">
         <div class="footer-widget footer-link">
           <h4>Информация</h4>
-          <ul>
-            <li><a href="#">о нас</a></li>
-            <li><a href="#">услуги</a></li>
-            <li><a href="#">цены</a></li>
-            <li><a href="#">команда</a></li>
-            <li><a href="#">отзывы</a></li>
-            <li><a href="#">журнал</a></li>
-          </ul>
+          <?php
+        wp_nav_menu([
+          'theme_location' => 'footer_1',
+          'container'      => false, // <div> avtomatik chiqmasin
+          'menu_class'     => '',    // <ul> uchun class qo‘shmaymiz
+          'depth'          => 1,     // Faqat 1-darajali menyu
+          'items_wrap'     => '<ul>%3$s</ul>', // Faqat <ul><li>...</li></ul>
+        ]);
+        ?>
         </div>
+
+
       </div>
 
       <div class="col-lg-2 col-sm-6 col-md-6">
