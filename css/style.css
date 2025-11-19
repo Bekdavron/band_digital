@@ -1792,3 +1792,7 @@ BLOG SINGLE
 .search i{
 display: none;
 }
+/* custom */
+.title-h3{
+  margin: 20px 0px 25px 0px!important;
+}

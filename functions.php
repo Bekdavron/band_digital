@@ -121,13 +121,13 @@ function band_digital_widgets_init() {
         'before_title'  => '<h4>',
         'after_title'   => '</h4>',
     ) );
-         register_sidebar([
-        'name'          => __( 'Footer Contacts', 'band_digital' ),
-        'id'            => 'footer_contacts',
-        'description'   => __( 'Add widgets here to appear in your footer.', 'band_digital' ),
-        'before_widget' => '<div class="footer-widget footer-contacts">',
-        'after_widget'  => '</div>',
-        'before_title'  => '<h4>',
-        'after_title'   => '</h4>',
-  ]);
+//          register_sidebar([
+//         'name'          => __( 'Footer Contacts', 'band_digital' ),
+//         'id'            => 'footer_contacts',
+//         'description'   => __( 'Add widgets here to appear in your footer.', 'band_digital' ),
+//         'before_widget' => '<div class="footer-widget footer-contacts">',
+//         'after_widget'  => '</div>',
+//         'before_title'  => '<h4>',
+//         'after_title'   => '</h4>',
+//   ]);
 }
